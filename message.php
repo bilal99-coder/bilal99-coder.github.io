@@ -1,32 +1,55 @@
 <?php
-   // echo "This msg is sent from PHP file";
-    //let's get all form values
-    if(isset($_POST["btn_send"])){
-    $name = $_POST['name']; 
-    $email = $_POST['email']; 
-    $subject = $_POST['subject']; 
-    $message = $_POST['message']; 
+//Import PHPMailer classes into the global namespace
+//These must be at the top of your script, not inside a function
+use phpmailer\phpmailer\src\PHPMailer;
+use phpmailer\phpmailer\src\SMTP;
+use phpmailer\phpmailer\src\Exception;
 
-    if(!empty($email) && !empty($message)) { // if email and message field is not empty 
-        if(filter_var($email, FILTER_VALIDATE_EMAIL)){ //if user entered email is valid 
-            $receiver = "bilalsahli1999@gmail.com"; // email receiver email address
-            $subject = "From: $name <$email>" //subject of the email. Subject looks like From: Maghrette <abc@visma.no> 
-            //merging concating all user values inside body variable. \n used for new line. 
-            $body = "Name: $name\nEmail: $email \nSubject: $subject \nMessage: $message"; 
-            $sender = "From: $email"; // email sender 
-            if(mail($receiver, $subject, $body, $sender)) { //mail()is a inbuilt php function to send mail 
-                echo "Your message has been sent"; 
-            }else{
-                echo "Sorry, failed to send your message!"; 
-            }
-        } 
-        else{
-            echo"Enter a valid email address!"
-        }
+//Load Composer's autoloader
+require 'autoload.php';
+
+//Create an instance; passing `true` enables exceptions
+$mail = new PHPMailer(true);
+
+try {
+    //Server settings
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+    $mail->isSMTP();                                            //Send using SMTP
+    $mail->Host       = 'stmp.gmail.com';                     //Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+    $mail->Username   = 'bilalsahli1999@example.com';                     //SMTP username
+    $mail->Password   = 'peaceman';                               //SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
+    $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    if(isset($_POST["btn_send"])){
+        $name = $_POST['name']; 
+        $email = $_POST['email']; 
+        $subject = $_POST['subject']; 
+        $message = $_POST['message']; 
     }
-        else {
-            echo "Email and message field is required!"
-        }
-    }
-   
+    //Recipients
+    ////Set who the message is to be sent from
+    $mail->setFrom('bilalssahli1999@gmail.com', 'Bilal Sahli');
+    //Set who the message is to be sent to
+                                                            //Add a recipient
+    $mail->addAddress('bilalssahli1999@gmail.com', 'Bilal Sahli'));               //Name is optional
+   // $mail->addReplyTo('info@example.com', 'Information');
+   // $mail->addCC('cc@example.com');
+   // $mail->addBCC('bcc@example.com');
+
+    //Attachments
+    //$mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+    //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+
+    //Content
+    $mail->isHTML(true);                                  //Set email format to HTML
+    $mail->Subject = $subject;
+    $mail->Body    = "Name: $name\nEmail: $email \nSubject: $subject \nMessage: $message";
+    $mail->AltBody = "Name: $name\nEmail: $email \nSubject: $subject \nMessage: $message";
+
+    $mail->send();
+    echo 'Message has been sent';
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}
 ?>
