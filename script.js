@@ -56,7 +56,6 @@ form.onsubmit=(e) => {
     xhr.onload = ()=>{ //once ajax loaded 
         if(xhr.readyState == 4 && xhr.status == 200){ //if ajax response status is 200 & ready status is 4 means there is any error
             let response = xhr.response; //storing ajax response in a response variable
-            console.log(response); 
             if(response.indexOf("Email and Message field is required") != -1 || response.indexOf("Email and Message field is required") || response.indexOf("Enter a valid email address!") || response.indexOf("Sorry, failed to send your message!")){
                 statusTxt.style.color = "red"; 
             }else{
