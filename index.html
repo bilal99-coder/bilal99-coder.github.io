@@ -196,24 +196,24 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form action="script.js" method="POST"> <!--<form action="mail_handler.php" method="post">-->
+                    <form action="" method="POST" class="form"> <!--<form action="mail_handler.php" method="post">-->
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" name="name" placeholder="Name" required>
+                                <input type="text" name="name" placeholder="Name" >
                             </div>
                             <div class="field email">
-                                <input type="email" name="email" placeholder="Email" required>
+                                <input type="email" name="email" placeholder="Email" >
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" name="subject" placeholder="Subject" required>
+                            <input type="text" name="subject" placeholder="Subject" >
                         </div>  
                         <div class="field textarea">
                             <textarea cols="30" rows="10" name="message" placeholder=""></textarea>
                         </div>
                         <div class="button-area">
                             <button type="submit" name="btn-send">Send Message</button>
-                            <span></span>
+                            <span>Sending your message...</span>
                         </div>
                     </form>
                 </div>
@@ -229,3 +229,4 @@
     <script src="./script.js"></script>
 </body>
 </html>
+

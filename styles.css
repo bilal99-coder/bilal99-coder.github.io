@@ -442,7 +442,7 @@ section .title::after{
     width: 100%;
 }
 
-.contact .right form .button button{
+.contact .right form .button-area button{
     width: 170px;
     height: 100%;
     border: 2px solid crimson; 
@@ -454,9 +454,14 @@ section .title::after{
     transition: all 0.3 ease;
     cursor: pointer;
 }
-.contact .right form .button button:hover{
+.contact .right form .button-area button:hover{
     color: crimson;
     background: none;
+}
+.button-area span{
+    color: #0D6EFD; 
+    margin-left: 30px;
+    display: none;
 }
 /* footer section styling  */
 footer {
