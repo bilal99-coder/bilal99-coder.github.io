@@ -1,5 +1,6 @@
 <?php
-
+response.addHeader("Access-Control-Allow-Origin", "*");
+echo "This is sent from a PHP file"; 
 //let's get all form values
 $name= $_POST['name']; 
 $email= $_POST['email']; 
