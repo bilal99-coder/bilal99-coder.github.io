@@ -43,12 +43,14 @@ var typed = new Typed(".typing-2", {
 })
 
 // functional contact form 
-
+/*
+Desactivated This part of code because of the restrictions the server hosts impose on email sending via Phpmailer. Those restrictions are imposed 
+to fight email spams. I am using now the email api from "formsubmit.co".
 const form= document.querySelector("form"),
       statusTxt = form.querySelector(".button-area span"); 
 
 form.onsubmit=(e) => {
-    e.preventDefault(); //preventing form from submitting 
+   // e.preventDefault(); //preventing form from submitting 
     statusTxt.style.color = "#0D6EFD"; 
     statusTxt.style.display="block"; 
     
@@ -72,4 +74,4 @@ form.onsubmit=(e) => {
     let formData = new FormData(form); //creating new FormData obj. This obj is used to send form data 
     xhr.send(formData); //sending form data 
 }
-
+*/
