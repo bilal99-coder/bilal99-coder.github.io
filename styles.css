@@ -23,6 +23,7 @@ html{
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3 ease;
     z-index: 999;
+    
 }
 .navbar.sticky{
     padding: 15px 0;
@@ -100,14 +101,23 @@ html{
 .home{
     display: flex;
     background: url("./images/banner.jpg") no-repeat center;
-    height: 100vh;
+    height: 100%;
+    padding-top: 500px;
+    background-repeat: repeat;
+    position: relative;
     color: #fff;
     min-height: 500px;
     font-family: 'Ubuntu', sans-serif;
 }
 
+.home-content{
+    position: absolute;
+    top: 45%;
+    margin: inherit;
+}
+
 .home .max-width{
-    margin: auto 0 auto 40px;
+     margin: auto 0 auto 40px; 
 }
 .home .home-content .text-1{
     font-size: 27px;
@@ -462,6 +472,10 @@ section .title::after{
     color: #0D6EFD; 
     margin-left: 30px;
     display: none;
+}
+
+.button-area button{
+    padding: 12px 6px; 
 }
 /* footer section styling  */
 footer {
