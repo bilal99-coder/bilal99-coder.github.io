@@ -9,6 +9,20 @@
 html{
     scroll-behavior: smooth;
 }
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 .max-width{
     max-width: 1300px;
     padding: 0 80px;
@@ -101,23 +115,21 @@ html{
 .home{
     display: flex;
     background: url("./images/banner.jpg") no-repeat center;
-    height: 100%;
-    padding-top: 500px;
-    background-repeat: repeat;
-    position: relative;
-    color: #fff;
+    height: 100vh;
     min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
     font-family: 'Ubuntu', sans-serif;
 }
 
-.home-content{
-    position: absolute;
-    top: 45%;
-    margin: inherit;
-}
 
 .home .max-width{
-     margin: auto 0 auto 40px; 
+     width: 100%;
+    display: flex;  
+}
+.home .home-content .row{
+    margin-right: 0;
 }
 .home .home-content .text-1{
     font-size: 27px;
@@ -203,7 +215,7 @@ section .title::after{
 }
 
 .about .title::after{
-    content: "who I am";
+    content: "Hvem er Jeg";
 }
 
 
@@ -248,6 +260,13 @@ section .title::after{
     color:crimson;
     background: none;
 }
+
+.about-content .right p span{
+    font-weight: bold;
+    font-family: ubuntu, Helvetica, sans-serif;
+    font-style: italic;
+}
+
 
 /* services section styling  */
 .services{
@@ -362,7 +381,7 @@ section .title::after{
 .skills .skills-content .right .css::before{
     width: 60%;
 }
-.skills .skills-conten  t .right .Javascript::before{
+.skills .skills-content .right .Javascript::before{
     width: 30%;
 }
 .skills .skills-content .right .SQL::before{
@@ -373,6 +392,18 @@ section .title::after{
 }
 .skills .skills-content .right .React::before{
     width: 5%;
+}
+.skills .skills-content .right .Csharp::before{
+    width: 50%;
+}
+
+.skills .skills-content .right .PHP::before{
+    width: 25%;
+}
+
+.skills .skills-content .right .learning::before{
+    width: 100%;
+   
 }
 
 /* contact section styling */
@@ -475,7 +506,7 @@ section .title::after{
 }
 
 .button-area button{
-    padding: 12px 6px; 
+    padding: 12px ; 
 }
 /* footer section styling  */
 footer {
@@ -489,6 +520,152 @@ footer span a {
 footer span a:hover{
     text-decoration: underline;
 }
+
+/*Loading span styling*/ 
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap');
+ * {
+	 box-sizing: border-box;
+}
+ *::before, *::after {
+	 box-sizing: border-box;
+}
+
+ #container {
+	 position: relative;
+	 transform: scale(0.725);
+     margin: 0;
+     height: 10px;
+}
+ .divider {
+	 position: absolute;
+	 z-index: 2;
+	 top: 40px;
+	 left: 200px;
+	 width: 50px;
+	 height: 15px;
+	 background: #fff;
+    
+}
+ .loading-text {
+	 position: absolute;
+     bottom: -25px;
+     left: -240px;
+	 font-size: 3.75rem;
+	 font-weight: 300;
+	 margin: 0;
+	 white-space: nowrap;
+     
+}
+ .loading-text::before {
+	 position: absolute;
+	 content: '';
+	 z-index: 1;
+	 top: 40px;
+	 left: 115px;
+	 width: 6px;
+	 height: 6px;
+	 background: #000;
+	 border-radius: 50%;
+	 animation: dotMove 1800ms cubic-bezier(0.25, 0.25, 0.75, 0.75) infinite;
+     
+}
+ .loading-text .letter {
+	 display: inline-block;
+	 position: relative;
+	 color: #000;
+	 letter-spacing: 8px;
+}
+ .loading-text .letter:nth-child(1) {
+	 transform-origin: 100% 70%;
+	 transform: scale(1, 1.275);
+}
+ .loading-text .letter:nth-child(1)::before {
+	 position: absolute;
+	 content: '';
+	 top: 22px;
+	 left: 0;
+	 width: 14px;
+	 height: 36px;
+	 background: #fff;
+	 transform-origin: 100% 0;
+	 animation: lineStretch 1800ms cubic-bezier(0.25, 0.25, 0.75, 0.75) infinite;
+}
+ .loading-text .letter:nth-child(5) {
+	 transform-origin: 100% 70%;
+	 animation: letterStretch 1800ms cubic-bezier(0.25, 0.23, 0.73, 0.75) infinite;
+}
+ .loading-text .letter:nth-child(5)::before {
+	 position: absolute;
+	 content: '';
+	 top: 15px;
+	 left: 2px;
+	 width: 9px;
+	 height: 15px;
+	 background: #fff;
+}
+ @keyframes dotMove {
+	 0%, 100% {
+		 transform: rotate(180deg) translate(-110px, -10px) rotate(-180deg);
+	}
+	 50% {
+		 transform: rotate(0deg) translate(-111px, 10px) rotate(0deg);
+	}
+}
+ @keyframes letterStretch {
+	 0%, 100% {
+		 transform: scale(1, 0.35);
+		 transform-origin: 100% 75%;
+	}
+	 8%, 28% {
+		 transform: scale(1, 2.125);
+		 transform-origin: 100% 67%;
+	}
+	 37% {
+		 transform: scale(1, 0.875);
+		 transform-origin: 100% 75%;
+	}
+	 46% {
+		 transform: scale(1, 1.03);
+		 transform-origin: 100% 75%;
+	}
+	 50%, 97% {
+		 transform: scale(1);
+		 transform-origin: 100% 75%;
+	}
+}
+ @keyframes lineStretch {
+	 0%, 45%, 70%, 100% {
+		 transform: scaleY(0.125);
+	}
+	 49% {
+		 transform: scaleY(0.75);
+	}
+	 50% {
+		 transform: scaleY(0.875);
+	}
+	 53% {
+		 transform: scaleY(0.5);
+	}
+	 60% {
+		 transform: scaleY(0);
+	}
+	 68% {
+		 transform: scaleY(0.18);
+	}
+}
+ @media (min-width: 48rem) {
+	 #container {
+		 transform: scale(0.725rem);
+	}
+}
+ @media (min-width: 62rem) {
+	 #container {
+		 transform: scale(0.85);
+	}
+}
+ 
+
+
 
 
 /* responsive media query start  */
@@ -520,9 +697,6 @@ footer span a:hover{
     }
     .menu-btn i.active:before{
         content: "\f00d";
-    }
-    .max-width{
-        padding: 0 50px;
     }
     .navbar .menu{
         position: fixed;  
@@ -616,7 +790,28 @@ footer span a:hover{
     .home .home-content .text-3{
         font-size: 27px; 
     }
-    
+    .about .about-content .right .text,
+    .skills .skills-content .left .text{
+        font-size: 19px;
+    }
+    .contact .right form .fields{
+        flex-direction: column;
+    }
+    .contact .right form .name,
+    .contact .right form .email{
+        margin: 0;
+    }
+    .right form .error-box{
+       width: 150px;
+    }
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
 }
 
 
