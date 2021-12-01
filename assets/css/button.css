@@ -1,0 +1,63 @@
+/* General Button Design */
+.button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 17px;
+    padding: 11px 16px;
+    border-radius: 23px;  
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .button:hover {
+    -webkit-transform: translateY(-7px);
+    -ms-transform: translateY(-7px);
+    transform: translateY(7px);
+    transform: translateX(17px);
+
+
+  }
+  
+  /* White button */
+  .white-btn {
+    background-color: var(--white);
+    color: var(--dark-blue);
+  }
+  
+  /* Blue button */
+  .blue-button {
+    background-color: var(--dark-blue);
+    color: var(--white);
+  }
+  
+  /* Nested button images */
+  .blue-button img {
+    width: 16px;
+    margin-left: 5px;
+  }
+
+  
+
+  .button-til-hooyre:hover{
+    transform: translateX(-27px);
+
+  }
+
+  .button-down:hover {
+    transform: translateY(27px);
+  }
+
+  .button .active {
+    font-size: 80px;
+
+  }
+
+

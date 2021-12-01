@@ -1,0 +1,32 @@
+/* Footer */
+footer {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-weight: bold;
+    min-height: 9vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  
+  /* Footer Mobile */
+  @media screen and (max-width: 768px) {
+    footer {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding: 40px;
+    }
+  
+    .company-name {
+      padding: 20px;
+    }
+  }
+  

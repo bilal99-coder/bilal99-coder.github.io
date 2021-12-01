@@ -1,0 +1,76 @@
+/* NO SCRIPT STYLES */
+
+/* Drop down styles */
+.panel {
+    max-height: 5000vh; /* open up the accordions when JS is disabled */
+    padding: 18px 18px;
+  }
+  .accordion {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .accordion:after {
+    content: ""; /* Remove open/close icon */
+  }
+  
+  /* Mobile navMenybar styles */
+  @media screen and (max-width: 768px) {
+    navMeny {
+      padding-right: 0;
+    }
+  
+    .hamburger {
+      display: none;
+    }
+  
+    navMeny .navMeny-logo {
+      display: block;
+      margin-left: 5px;
+    }
+  
+    navMeny .navMeny-logo h1 {
+      display: none;
+    }
+  
+    navMeny .links .flag-icon {
+      opacity: 1;
+      height: 3vh;
+      width: 3vh;
+    }
+  
+    navMeny .links {
+      position: static;
+      background: var(--dark-blue);
+      height: 10vh;
+      max-width: 100%;
+      width: 100%;
+      clip-path: none;
+      -webkit-clip-path: none;
+      -webkit-transition: all 1s ease-out;
+      -o-transition: all 1s ease-out;
+      -webkit-transition: none;
+      -o-transition: none;
+      transition: none;
+      pointer-events: all;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
+    }
+  
+    navMeny .links .link {
+      z-index: 2;
+      opacity: 1;
+    }
+  
+    navMeny .links .link a {
+      font-size: 1rem;
+    }
+  }
+  

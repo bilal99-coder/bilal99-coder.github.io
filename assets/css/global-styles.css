@@ -1,0 +1,130 @@
+/* Color Pallette */
+:root {
+    --white: #fff;
+    --white-dark: rgb(226, 225, 225);
+    --black: #111;
+    --light-blue: #054452;
+    --dark-blue: #013877;
+  }
+  
+  /* Standard reset + border-box */
+  * {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  /* Body Initialized */
+  body {
+    color: var(--black);
+    font-family: Arial, sans-serif;
+    background-color: var(--white);
+  }
+  
+  /* Anchor text reset */
+  a {
+    text-decoration: none;
+  }
+  
+  .link-white {
+    color: var(--white);
+  }
+  
+  .link-white:hover {
+    color: var(--dark-blue);
+    font-weight: bold;
+  }
+  
+  .underline-link {
+    text-decoration: underline;
+    color: var(--black);
+  }
+  
+  .underline-link-img {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .underline-link:hover {
+    color: var(--dark-blue);
+  }
+  
+  .kildeliste {
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    line-height: 30px;
+  }
+
+  /* Offset the navMenybar height */
+  .scroll {
+    position: absolute;
+    -webkit-transform: translateY(-10vh);
+    -ms-transform: translateY(-10vh);
+    transform: translateY(-10vh);
+  }
+  
+  /* Section Design */
+  .full-height-navMeny,
+  .full-height-navMeny-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  
+  .full-height-navMeny {
+    min-height: 90vh;
+  }
+  
+  .full-height-navMeny-footer {
+    min-height: 80vh;
+    border-top: 1px solid var(--white-dark);
+  }
+  
+  /* Margin tops */
+  .m-top-0 {
+    margin-top: 0 !important;
+  }
+  
+  .m-top-25 {
+    margin-top: 25px !important;
+  }
+  
+  .p-top-0 {
+    padding-top: 0 !important;
+  }
+  
+  .p-top-25 {
+    padding-top: 25px !important;
+  }
+  
+  .p-top-50 {
+    padding-top: 50px !important;
+  }
+
+  .p-top-70 {
+    padding-top: 70px !important;
+  }
+  
+  .p-bottom-0 {
+    padding-bottom: 0 !important;
+  }
+  
+  .p-bottom-25 {
+    padding-bottom: 25px !important;
+  }
+  
+  .p-bottom-50 {
+    padding-bottom: 50px !important;
+  }
+  
+

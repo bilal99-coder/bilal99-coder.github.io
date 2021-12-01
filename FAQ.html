@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--TitleNameOnWebsite-->
+  <title>ScanPlanet</title>
+
+  <!-- ScanPlanet favicon -->
+  <link rel="icon" type="image/png" href="assets/img/navMeny-logo.png" />
+
+  <!--CSS links -->
+  <link rel="stylesheet" href="assets/css/navMeny.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/button.css" />
+  <link rel="stylesheet" href="assets/css/drop-down.css" />
+  <link rel="stylesheet" href="assets/css/index-bg.css" />
+  <link rel="stylesheet" href="assets/css/global-styles.css" />
+  <link rel="stylesheet" href="assets/css/kontakt.css" />
+
+  <noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css" />
+  </noscript>
+</head>
+
+<body>
+  <!-- navMeny Beginning -->
+  <navMeny>
+    <a href="index.html">
+      <div class="navMeny-logo">
+        <img src="assets/img/navMeny-logo.png" alt="navMeny logo" />
+        <h1>ScanPlanet</h1>
+      </div>
+    </a>
+
+    <div class="links">
+      <div class="link">
+        <a href="challenge.html">Oppgave</a>
+      </div>
+
+      <div class="link">
+        <a href="solution.html">Løsning</a>
+      </div>
+
+      <div class="link">
+        <a href="app.html">App</a>
+      </div>
+
+      <div class="link">
+        <a class="active" href="FAQ.html">FAQ</a>
+      </div>
+      
+      <div>
+        <a href="en/FAQ.html"><img class="flag-icon" src="assets/img/icons/engelskFlag.png"
+            alt="english text alternative" /></a>
+      </div>
+    </div>
+
+    <img class="hamburger" src="assets/img/icons/menu.png" alt="hamburgermeny" />
+  </navMeny>
+  <!-- navMeny Stop -->
+
+  <main>
+    <!-- FAQ Section Beginnning -->
+    <section class="faq-section">
+      
+      <div class="drop-down-holder">
+        <h2 class="drop-down-category-title">Ofte stilte spørsmål</h2>
+
+        <!-- Question 1 -->
+        <div class="sources-drop-down-content">
+          <button class="accordion">Hva er ScanPlanet?</button>
+          <div class="panel">
+            <p>
+              ScanPlanet er en app som informerer og foreslår hvordan brukere kan 
+              redde planeten ved å tilpasse dietten.
+            </p>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="sources-drop-down-content">
+          <button class="accordion">Hvor kan jeg nedlaste ScanPlanet?</button>
+          <div class="panel">
+            <p>
+              Appen er snart tilgjengelig på App Store og Google Play.
+            </p>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="sources-drop-down-content">
+          <button class="accordion">Må jeg betale for appen?</button>
+          <div class="panel">
+            <p>
+              Nei, appen er gratis!
+            </p>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="sources-drop-down-content">
+          <button class="accordion">Hva er deres personvernerklæring?</button>
+          <div class="panel">
+            <p>
+              Vi vil aldri dele informasjonen din med noen tredjepart. Innloggingsdata vil 
+              bli kryptert med aes-256-cbc kryptering.
+            </p>
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="sources-drop-down-content">
+          <button class="accordion">Hvilke språk er støttet i ScanPlanet appen?</button>
+          <div class="panel">
+            <p>
+              Appen er kun tilgjengelig på engelsk og norsk foreløpig.
+            </p>
+          </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="sources-drop-down-content">
+          <button class="accordion">Hvordan lager jeg en bruker?</button>
+          <div class="panel">
+            <p>
+              Du kan lage en bruker med e-post og passord, eller du kan bruke vår 
+              OAuth integrasjon som gir deg muligheten for å logge inn med enten 
+              Google eller Facebook. På denne måten trenger du ikke huske 
+              brukernavMenyn og passord for kontoen.
+            </p>
+          </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="sources-drop-down-content">
+          <button class="accordion">Hvordan sletter jeg kontoen min?</button>
+          <div class="panel">
+            <p>
+              Under innstillinger finnes det en valgmulighet som heter "Slett 
+              min konto og mine brukerdata".
+            </p>
+          </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="sources-drop-down-content">
+          <button class="accordion">Hvilke brukernavMenyn er tillat på ScanPlanet?</button>
+          <div class="panel">
+            <p>
+              Symboler, tall, store bokstaver. Bokstaver fra flere språk. Titler (f.eks. 
+              profesjonelle, religiøse titler). Ord eller fraser i stedet for navMenyn. Det 
+              er ikke tillat å late som om du er noen andre enn deg selv.
+            </p>
+          </div>
+        </div>
+
+        <div class="sources-drop-down-content">
+          <button class="accordion">Kan jeg lage og selge mine egne produkter basert på 
+            ScanPlanet ideen?</button>
+          <div class="panel">
+            <p>
+              Nei, ScanPlanet® går ikke inn i lisensering ordninger med individer/grupper. 
+              Alt innholdet vårt er produsert under lisens ordning. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ Section Stop -->
+
+    <!--For at meldingen skal kunne sendes må prosjektet kjøres på en live server, du kan da laste ned og bruke live server extention fra visual studio code -->
+
+    <!-- Kontakt Section Beginnning -->
+    <section class="kontakt" id="kontakt">
+          
+          <div class="kontakt-content">
+         
+              <div class="column right">
+                  <div class="text">Send oss en melding</div>
+                  <form action="https://formsubmit.co/bilalsahli1999@gmail.com" method="POST">
+                      <div class="fields">
+                          <div class="field name">
+                              <input type="text" name="name" placeholder="Navn" >
+                          </div>
+                          <div class="field email">
+                              <input type="email" name="email" placeholder="E-postadresse" >
+                          </div>
+                      </div>
+                      <div class="field">
+                          <input type="text" name="subject" placeholder="Emne" >
+                      </div>  
+                      <div class="field textarea">
+                          <textarea cols="30" rows="10" name="message" placeholder="Hva kan vi hjelpe deg med?"></textarea>
+                      </div>
+                      <div class="button-area">
+                          <button type="submit" name="btn-send">Send Melding</button>
+                      </div>
+                      <input type="hidden" name="_captcha" value="false">
+                      <input type="hidden" name="_next" value="https://bilal99-coder.github.io/takk.html">
+                  </form>
+              </div>
+          </div>
+      
+  </section>
+  <!-- Kontakt Section Stop -->
+
+  </main>
+
+  <!-- Footer Beginning -->
+  <footer>
+    <div class="company-name">Copyright © ScanPlanet Inc. All rights reserved.</div>
+    <a href="sources.html" class="button white-btn">
+      Kilder
+    </a>
+  </footer>
+  <!-- Footer Stop -->
+
+
+  <script src="assets/js/navMeny.js"></script>
+  <script src="assets/js/drop-down.js"></script>
+
+</body>
+</html>

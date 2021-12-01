@@ -1,0 +1,121 @@
+/* Main holder */
+.img-text-row-holder {
+    padding: 15px 0px 10px 0px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  
+  /* Image Design */
+  .img-text-row-holder img {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .img-text-row-holder .prototype {
+    width: 60%;
+    max-width: 250px;
+  }
+  .img-text-row-holder .small-img {
+    width: 40%;
+    max-width: 100px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  
+  /* Text holder design */
+  .img-text-row-holder .text {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  
+  /* Title Design */
+  .img-text-row-holder .text h1 {
+    color: var(--dark-blue);
+    padding-bottom: 25px;
+    text-align: left;
+  }
+  .img-text-row-holder .text h3 {
+    color: var(--dark-blue);
+    padding-bottom: 10px;
+    text-align: left;
+  }
+  
+  /* Paragraph Design */
+  .img-text-row-holder .text p {
+    text-align: left;
+    max-width: 650px;
+    padding-bottom: 25px;
+    line-height: 30px;
+  }
+  
+  /* Button Design */
+  .img-text-row-holder .text .button {
+    display: inline-block;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+   /* Lines Design */
+   .line {
+    height: 3px;
+    width: 100%;
+    background-color: none;
+    position: relative;
+  }
+  .line1::before,.line2::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 80%; 
+  left: 10%;
+  right: 10%; 
+  top: 0;
+  background: var(--dark-blue); 
+  }
+  /* Tablet layout */
+  @media screen and (max-width: 1100px) {
+    .img-text-row-holder {
+      padding: 50px;
+      padding-top: 0;
+    }
+  
+    .img-text-row-holder .text {
+      padding: 0;
+    }
+
+    .img-text-row-holder .text h1,
+    .img-text-row-holder .text h3 {
+      text-align: center;
+      padding-top: 25px;
+    }
+  
+    .img-text-row-holder img {
+      width: 60%;
+      padding: 0;
+      margin-bottom: 0;
+      margin-top: 25px;
+    }
+  
+    .img-text-row-holder .prototype {
+      width: 80%;
+      max-width: 300px;
+    }
+  }
+  
+  /* Mobile layout */
+  @media screen and (max-width: 768px) {
+    .img-text-row-holder {
+      padding: 25px;
+      padding-top: 0;
+    }
+  }
